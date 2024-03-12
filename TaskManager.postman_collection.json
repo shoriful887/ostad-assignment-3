@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "8072b75b-1fbd-4c66-abee-bce104e927f6",
+		"name": "TaskManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33557068"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"shoriful01753@gmail.com\",\r\n    \"firstName\":\"Shoriful\",\r\n    \"lastName\":\"Islam\",\r\n    \"password\":\"123\",\r\n    \"UserName\":\"shorif\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/createProfile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"createProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTAzNDA1NTUsImRhdGEiOnsiX2lkIjoiNjVmMDY2ZGNlM2E0NjU1NGNmY2I4YTIzIiwiZW1haWwiOiJzaG9yaWZ1bDAxNzUzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlNob3JpZnVsIiwibGFzdE5hbWUiOiJJc2xhbSIsInBhc3N3b3JkIjoiMTIzIiwiVXNlck5hbWUiOiJzaG9yaWYiLCJjcmVhdGVkQXQiOiIyMDI0LTAzLTEyVDE0OjI5OjQ4LjEyNFoiLCJ1cGRhdGVkQXQiOiIyMDI0LTAzLTEyVDE0OjI5OjQ4LjEyNFoifSwiaWF0IjoxNzEwMjU0MTU1fQ.Nr9hXHLDvTg2MpfExKxefXV_UduRfHlqA1u0S_NF1A4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"123\",\r\n    \"UserName\":\"shorif\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/userLogin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"userLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "selectProfile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTAzNDA1NzQsImRhdGEiOnsiX2lkIjoiNjVmMDY2ZGNlM2E0NjU1NGNmY2I4YTIzIiwiZW1haWwiOiJzaG9yaWZ1bDAxNzUzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlNob3JpZnVsIiwibGFzdE5hbWUiOiJJc2xhbSIsInBhc3N3b3JkIjoiMTIzIiwiVXNlck5hbWUiOiJzaG9yaWYiLCJjcmVhdGVkQXQiOiIyMDI0LTAzLTEyVDE0OjI5OjQ4LjEyNFoiLCJ1cGRhdGVkQXQiOiIyMDI0LTAzLTEyVDE0OjI5OjQ4LjEyNFoifSwiaWF0IjoxNzEwMjU0MTc0fQ.isHeq4AkoyVQ62H1k3nLByIXBE852f1RpYZmZM2l0Uw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/selectProfile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"selectProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProfile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTAzNDA1NzQsImRhdGEiOnsiX2lkIjoiNjVmMDY2ZGNlM2E0NjU1NGNmY2I4YTIzIiwiZW1haWwiOiJzaG9yaWZ1bDAxNzUzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlNob3JpZnVsIiwibGFzdE5hbWUiOiJJc2xhbSIsInBhc3N3b3JkIjoiMTIzIiwiVXNlck5hbWUiOiJzaG9yaWYiLCJjcmVhdGVkQXQiOiIyMDI0LTAzLTEyVDE0OjI5OjQ4LjEyNFoiLCJ1cGRhdGVkQXQiOiIyMDI0LTAzLTEyVDE0OjI5OjQ4LjEyNFoifSwiaWF0IjoxNzEwMjU0MTc0fQ.isHeq4AkoyVQ62H1k3nLByIXBE852f1RpYZmZM2l0Uw",
+						"type": "text"
+					},
+					{
+						"key": "username",
+						"value": "shorif",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profileUpdate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profileUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "todoCreate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "shorif",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTAzNDA1NzQsImRhdGEiOnsiX2lkIjoiNjVmMDY2ZGNlM2E0NjU1NGNmY2I4YTIzIiwiZW1haWwiOiJzaG9yaWZ1bDAxNzUzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlNob3JpZnVsIiwibGFzdE5hbWUiOiJJc2xhbSIsInBhc3N3b3JkIjoiMTIzIiwiVXNlck5hbWUiOiJzaG9yaWYiLCJjcmVhdGVkQXQiOiIyMDI0LTAzLTEyVDE0OjI5OjQ4LjEyNFoiLCJ1cGRhdGVkQXQiOiIyMDI0LTAzLTEyVDE0OjI5OjQ4LjEyNFoifSwiaWF0IjoxNzEwMjU0MTc0fQ.isHeq4AkoyVQ62H1k3nLByIXBE852f1RpYZmZM2l0Uw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TodoSubject\" : \"Tast 1 \",\r\n    \"TodoDescription\":\"Task 1 Description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/createTodo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"createTodo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Select Todo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "shorif",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTAzNDA1NzQsImRhdGEiOnsiX2lkIjoiNjVmMDY2ZGNlM2E0NjU1NGNmY2I4YTIzIiwiZW1haWwiOiJzaG9yaWZ1bDAxNzUzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlNob3JpZnVsIiwibGFzdE5hbWUiOiJJc2xhbSIsInBhc3N3b3JkIjoiMTIzIiwiVXNlck5hbWUiOiJzaG9yaWYiLCJjcmVhdGVkQXQiOiIyMDI0LTAzLTEyVDE0OjI5OjQ4LjEyNFoiLCJ1cGRhdGVkQXQiOiIyMDI0LTAzLTEyVDE0OjI5OjQ4LjEyNFoifSwiaWF0IjoxNzEwMjU0MTc0fQ.isHeq4AkoyVQ62H1k3nLByIXBE852f1RpYZmZM2l0Uw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/selectTodo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"selectTodo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateTodo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/updateTodo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"updateTodo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "statusUpdate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "shorif",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTAzNDA1NzQsImRhdGEiOnsiX2lkIjoiNjVmMDY2ZGNlM2E0NjU1NGNmY2I4YTIzIiwiZW1haWwiOiJzaG9yaWZ1bDAxNzUzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlNob3JpZnVsIiwibGFzdE5hbWUiOiJJc2xhbSIsInBhc3N3b3JkIjoiMTIzIiwiVXNlck5hbWUiOiJzaG9yaWYiLCJjcmVhdGVkQXQiOiIyMDI0LTAzLTEyVDE0OjI5OjQ4LjEyNFoiLCJ1cGRhdGVkQXQiOiIyMDI0LTAzLTEyVDE0OjI5OjQ4LjEyNFoifSwiaWF0IjoxNzEwMjU0MTc0fQ.isHeq4AkoyVQ62H1k3nLByIXBE852f1RpYZmZM2l0Uw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n    \"TodoStatus\" : \"Done\",\r\n    \"_id\" : \"65f073e27fcf3ebbaba63e2e\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/statusUpdateTodo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"statusUpdateTodo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTodo",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "username",
+						"value": "shorif",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTAzNDA1NzQsImRhdGEiOnsiX2lkIjoiNjVmMDY2ZGNlM2E0NjU1NGNmY2I4YTIzIiwiZW1haWwiOiJzaG9yaWZ1bDAxNzUzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlNob3JpZnVsIiwibGFzdE5hbWUiOiJJc2xhbSIsInBhc3N3b3JkIjoiMTIzIiwiVXNlck5hbWUiOiJzaG9yaWYiLCJjcmVhdGVkQXQiOiIyMDI0LTAzLTEyVDE0OjI5OjQ4LjEyNFoiLCJ1cGRhdGVkQXQiOiIyMDI0LTAzLTEyVDE0OjI5OjQ4LjEyNFoifSwiaWF0IjoxNzEwMjU0MTc0fQ.isHeq4AkoyVQ62H1k3nLByIXBE852f1RpYZmZM2l0Uw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"_id\":\"65f074067fcf3ebbaba63e32\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/deleteTodo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"deleteTodo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

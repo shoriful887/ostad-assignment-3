@@ -2,14 +2,13 @@ const TodoModel = require("../model/TodoModel")
 
 exports.createTodo =(req,res)=>{
 
-        let reqBody  = req.body 
-
-        let UserName  = req.headers['username']
-        let  TodoSubject = reqBody['TodoSubject']
-        let  TodoDescription = reqBody['TodoDescription']
-        let  TodoStatus = 'New'
-        let  TodoCreateDate = Date.now()
-        let  TodoUpdateDate = Date.now()
+        let reqBody  = req.body; 
+        let UserName  = req.headers['username'];
+        let  TodoSubject = reqBody['TodoSubject'];
+        let  TodoDescription = reqBody['TodoDescription'];
+        let  TodoStatus = 'New';
+        let  TodoCreateDate = Date.now();
+        let  TodoUpdateDate = Date.now();
 
         let postBody ={
             UserName:UserName,
@@ -38,8 +37,7 @@ exports.selectTodo=(req,res)=>{
 }
 
 exports.updateTodo=(req,res)=>{
-    let reqBody  = req.body 
-
+    let reqBody  = req.body
     let  TodoSubject = reqBody['TodoSubject']
     let  TodoDescription = reqBody['TodoDescription']
     let  _id = req.body['_id']
@@ -69,7 +67,7 @@ exports.deleteTodo =(req,res)=>{
 }
 
 
-exports. statusUpdateTodo=(req,res)=>{
+exports.statusUpdateTodo=(req,res)=>{
     let reqBody  = req.body 
     let  TodoStatus = reqBody['TodoStatus']
     let  _id = req.body['_id']
